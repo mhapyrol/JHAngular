@@ -45,7 +45,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 function ShoppingListCheckOffService() {
     var service = this;
 
-    var itemsToBuy = [{name:"cookies",quantity:"12"},{name:"chips",quantity:"3"},{name:"veggies",quantity:"1"},{name:"candy",quantity:"5"}];
+    var itemsToBuy = [{name:"cookies",quantity:"12"},{name:"chips",quantity:"3"},{name:"veggies",quantity:"1"},{name:"candy",quantity:"5"},{name:"twinkies",quantity:"1000"}];
     var itemsBought = [];
 
     service.addToList = function (itemName, quantity) {
