@@ -23,13 +23,23 @@ function FoundItemsDirective() {
 NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService) {
   var search = this;
-
+  search.empty = false;
   //search.searchText = "";
   search.foundItems = function () {
+    console.log(search.text);
+    if (search.searchText === undefined || search.searchText =="") {
+      search.empty = true;
+      search.found = [];
+      return true;
+    }
     var promise = MenuSearchService.getMatchedMenuItems(search.searchText);
     promise.then(function (response) {
       search.found = response;
-      console.log(response);
+      if (search.found.length == 0){
+        console.log("Length 0");
+        search.empty = true;
+      } else {search.empty = false;}
+      //console.log(response);
     })
     .catch(function(error) {
       console.log(error);
