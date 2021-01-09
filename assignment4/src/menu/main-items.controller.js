@@ -9,7 +9,8 @@ ItemDetailController.$inject = ['item']
 function ItemDetailController(item) {
   var itemDetail = this;
   itemDetail.items = item;
-  
+  console.log("itemDetails...");
+  console.log(itemDetail.items);
 }
 
 })();

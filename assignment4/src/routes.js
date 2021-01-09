@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-angular.module('Data')
+angular.module('MenuApp')
 .config(RoutesConfig);
 
 RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -20,8 +20,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
 
   // Premade list page
-  .state('mainList', {
-    url: '/main-list',
+  .state('categories', {
+    url: '/categories',
     templateUrl: 'src/menu/templates/main-categories.template.html',
     controller: 'MainCategoriesController as mainList',
     resolve: {
@@ -31,8 +31,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     }
   })
 
-  .state('itemDetail', {
-    url: '/item-detail/{itemId}',
+  .state('items', {
+    url: '/items/{itemId}',
     templateUrl: 'src/menu/templates/item-detail.template.html',
     controller: 'ItemDetailController as itemDetail',
     resolve: {
