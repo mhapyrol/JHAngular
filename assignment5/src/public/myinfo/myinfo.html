@@ -1,0 +1,19 @@
+<div class="container">
+
+<div ng-if="myinfo.showInfo">
+  <h2 id="myinfo-title" class="text-center">
+    {{ myinfo.userinfo.fn}} {{ myinfo.userinfo.ln}}
+  </h2>
+  <h3 class="text-center">
+    {{ myinfo.userinfo.em}} - {{ myinfo.userinfo.ph}}
+  </h3>
+  <br>
+
+  <menu-item menu-item="myinfo.menuItems">
+  </menu-item>
+
+</div>
+<div ng-if="myinfo.showLink">
+Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
+</div>
